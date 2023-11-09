@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //Vetor que divide os alunos em duas turmas.
+    // const nomes = ["João", "Juliana", "Ana", "Caio", "Lara", "Marjorie", "Guilherme", "Aline", "Fabiana", "André", "Carlos", "Paulo", "Bia", "Vivian", "Isabela", "Vinicius", "Renan", "Renata", "Daisy", "Camilo"];
+
+    // const sala1 = nomes.slice(0, nomes.length/2);
+    // const sala2 = nomes.slice(nomes.length/2);
+
+    // document.write (`Alunos da sala 1: ${sala1} <br>`);
+    // document.write (`Alunos da sala 2: ${sala2}`);
+
+    //------------------------------------------------------------------------------------------------
+    
+    //Ana e Caio mudaram de escola e Rodrigo entrou na lista de chamada.
+    //const listaDeChamada = ["João", "Juliana", "Ana", "Caio", "Lara", "Marjorie"];
+
+    //Splice aceita 3 parametros: primeiro quando começamos a cortar, segundo quantos vamos remover ou 0 se não vamos remover ninguém e terceiro o que vai ser colocado no lugar.
+    //listaDeChamada.splice(2,2,"Rodrigo")
+
+    //-----------------------------------------------------------------------------------------------
+
+    //Juntar duas turmas
+    // const salaDePython = ["Melissa", "Helena", "Rodrigo"];
+    // const salaDeJavaScript = ["Ju", "Leo", "Raquel"];
+    // const juntandoSala = salaDePython.concat(salaDeJavaScript);
+    // console.log(juntandoSala);
+    //-----------------------------------------------------------------------------------------------
+
+    //Lista de duas dimensões, EX1
+    // const alunos = ["João", "Juliana", "Caio", "Ana"];
+    // const mediaDosAlunos = [10, 7, 9, 6];
+    // let listaDeNotasEAlunos = [alunos, mediaDosAlunos];
+    // console.log(`${listaDeNotasEAlunos[0] [0]}, sua média é: ${listaDeNotasEAlunos [1] [0]}`)
+    //-----------------------------------------------------------------------------------------------
+
+    //Lista de duas dimensões, EX2
+    // let idades = [30, 35, 28]
+    // let nomes = ["Ana", "Juliana", "Leonardo"]
+    // let faculdade = [false, true, true]
+    // letfuncionarios = [nomes,idades,faculdade]
+
+    //retornar o nome do aluno e a média dele
+    // const alunos = ["João", "Juliana", "Caio", "Ana"];
+    // const mediaDosAlunos = [10, 7, 9, 6];
+    // let listaDeNotasEAlunos = [alunos, mediaDosAlunos];
+    // const exibeNomeNota = (nomeDoAluno) => {
+    //     if (listaDeNotasEAlunos[0].includes(nomeDoAluno)){
+    //         let indice = listaDeNotasEAlunos[0].indexOf(nomeDoAluno)
+    //         return listaDeNotasEAlunos[0] [indice] + ',sua média é ' + listaDeNotasEAlunos[1] [indice]
+    //     } else {
+    //         return "Aluno não está cadastrado"
+    //     }
+    // }
+    // console.log(exibeNomeNota("Ana"))
+
+    //primeiro for
+    // const numeros = [100, 200, 300, 400, 500, 600]
+    // for (let i = 0; i < numeros.length; i++){
+    //     console.log(i, numeros[i]);
+    // }
+
+   //array com média
+    //    const notas = [10, 6.5, 8, 7.5];
+    //    let somaDasNotas = 0
+    //    for (let i = 0; i < notas.length; i++){
+    //      somaDasNotas += notas[i]
+    //    }
+    //    let media = somaDasNotas/notas.length
+    //    console.log(media)
+
+    //média com for each
+    // const notas = [10, 6.5, 8, 7.5];
+    // let somaDasNotas = 0;
+    // notas.forEach(nota => {
+    //     somaDasNotas += nota
+    // });
+    // let media = somaDasNotas/notas.length
+    // console.log(media)
+
+    // média com mais de um vetor
+    // const notas1 = [10 , 6.5, 8 ,7.5]
+    // const notas2 = [9  , 6  , 6]
+    // const notas3 = [8.5, 9.5]
+
+    // const notasGerais = [notas1,notas2,notas3]
+
+    // let media = 0
+
+    // for (let i = 0; i < notasGerais.length; i++) {
+    //   for (let j = 0; j < notasGerais[i].length; j++) {
+    //     media += notasGerais[i][j]/notasGerais[i].length;
+    //   }
+    // }
+    // media = media/notasGerais.length;
+    // console.log (media);
+
+    //array for each recebendo uma função
+    // const alunos = ["João", "Juliana", "Caio", "Ana"]; 
+    // alunos.forEach(ImprimeNomes)
+    // function ImprimeNomes(nome){
+    //     console.log(nome)
+    // }
+
+    //somar 1 ponto extra das notas do aluno, porém nota 10 não pode ser aumentada.
+    // const notas = [10, 9, 8, 7, 6]
+    // const notasAtualizadas = notas.map(nota => nota == 10 ? nota : ++nota)
+    // console.log(notasAtualizadas)
+
+
+    //transformar as letras do vetor em maiúsculo
+    // let nomes = ["João", "Juliana", "Caio", "Ana"];
+    // const nomesAtualizados = nomes.map(nome => nome.toLocaleUpperCase())
+    // console.log(nomesAtualizados)
+
+
+
+// const nome = "Alura";
+// let nomeMaiusculas = "";
+
+// for (let i = 0; i < nome.length; i++) {
+//  nomeMaiusculas += nome[i].toUpperCase()
+// }
+// console.log(nomeMaiusculas)
+
+
+
+// const nomedoCurso = "Fundamentos de JS";
+// const nomeDaPlataforma = " Alura"
+
+// const nomeCompleto = nomedoCurso.concat(nomeDaPlataforma)
+// console.log(nomeCompleto) 
+
+
+
+// const nomes = ["João", "Juliana", "Caio", "Ana"];
+// const notas = [9, 8, 7, 6];
+// const reprovados = nomes.filter( (aluno, indice) => notas[indice] < 7)
+// console.log (`reprovados: ${reprovados}`)
+
+
+//média das salas
+// const salaJS = [7, 8, 8, 7, 10, 6.5, 4, 10, 7];
+// const salaJava = [6, 5, 8, 9, 5, 6];
+// const salaPython = [7, 3.5, 8, 9.5];
+
+// function mediaSala(notasDaSala){
+//     const somaDasNotas = notasDaSala.reduce((acum, atual)=> atual + acum, 0)
+//     return somaDasNotas/notasDaSala.length
+// }
+
+// console.log(`Média da sala de JavaScript ${mediaSala(salaJS)}`)
+// console.log(`Média da sala de Java ${mediaSala(salaJava)}`)
+// console.log(`Média da sala de Python ${mediaSala(salaPython)}`)
+
+
+</script>
+<body>
+    
+</body>
+</html>

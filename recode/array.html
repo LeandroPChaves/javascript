@@ -1,0 +1,67 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  let nome = new Array ();
+        //  for (let i = 0; i < 5; i++) {
+        //      let escrevaNome = prompt ("Digite nome na posição " + i);
+        //      nome[i] = escrevaNome;
+        // }
+        //  document.write (nome);
+
+        // let nome = [];
+        // for (i=0; i<5; i++){
+        //     let inserirNome = prompt("Digite nome na posição " + i);
+        //     nome[i] = inserirNome;
+        // }
+            // document.write (nome);
+
+        
+        let nota = new Array();
+        let soma = Number(0);
+        let cont = Number(0);
+        
+
+        for (let i = 0; i < 4; i++){
+            let escrevaNota = Number(prompt(`Escreva a nota na posição ${i + 1}`));
+            nota[i] = escrevaNota;
+            soma = (soma + nota[i]);
+            cont = (cont + 1);
+
+        }
+        let media= parseInt(soma/cont);
+        alert(`A soma das notas são: ${soma}`);
+        alert(`A quantidade de notas são: ${cont}`);
+        alert(`A média das notas são: ${media}`);
+
+        switch (media) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                alert ("Reprovado")
+                break
+            case 5:
+            case 6:
+                alert ("Recuperação")
+                break
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+                alert ("Aprovado")
+                break
+            default:
+                alert ("Média inválida")
+        }
+        
+    </script>
+</body>
+</html> 

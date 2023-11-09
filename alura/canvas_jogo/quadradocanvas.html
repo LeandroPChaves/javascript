@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="600" height="400"> </canvas>
+    
+</body>
+
+<script>
+    function novosQuadrados(x,y,cor){
+        let tela = document.querySelector("canvas");
+        let pincel = tela.getContext("2d");
+
+        for(let x = 0; x <= 150; x+=50){
+            pincel.fillStyle = cor;
+            pincel.strokeRect(x,y,50,50);
+            pincel.fillRect(x, y, 50, 50);
+            if (x == 150){
+                pincel.fillStyle = "white";
+                pincel.strokeRect(x,y,50,50);
+                pincel.fillRect(x, y, 50, 50);
+            }
+        }
+
+    }
+
+
+    function quadrados (x,y,cor){
+        let tela = document.querySelector("canvas");
+        let pincel = tela.getContext("2d");
+
+        pincel.fillStyle = cor;
+
+        x = 0;
+
+        while (x < 600){
+            pincel.fillRect(x, y, 50, 50);
+            //pincel.fillStroke = "black";
+            pincel.strokeRect(x,y,50,50);
+            x = x + 50;
+            
+        }
+    }
+
+    // quadrados(0,0,"green");
+    // quadrados(0,50,"orange");
+
+    novosQuadrados(0,0,"green");
+</script>
+</html>

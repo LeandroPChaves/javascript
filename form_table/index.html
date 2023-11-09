@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Resultados Operadores</title>
+</head>
+<body>
+    <header>
+        <h1>Resultados Operadores</h1>
+    </header>
+    <main>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Matrícula</th>
+                        <th>Qualidade</th>
+                        <th>Absenteísmo</th>
+                        <th>TMA</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelaOperadores">
+
+                    <tr class="operador">
+                        <td class="infoNome"></td>
+                        <td class="infoMatricula"></td>
+                        <td class="infoQualidade"></td>
+                        <td class="infoAbsenteismo"></td>
+                        <td class="infoTma"></td>
+                    </tr>
+
+                </tbody> 
+            </table>
+        </section>
+        <hr>
+        <section>
+            <form id="form-adiciona">
+
+                <div>
+                    <label for="nome">Nome: </label>
+                    <input type="text" name="" id="nome">
+                
+                    <label for="matricula">Matrícula: </label>
+                    <input type="number" name="" id="matricula">
+                </div>
+
+                <div>
+                    <label for="qualidade">Qualidade: </label>
+                    <input type="number" name="" id="qualidade">
+
+                    <label for="absenteismo">Absenteísmo: </label>
+                    <input type="number" name="" id="absenteismo">
+                
+                    <label for="tma">TMA: </label>
+                    <input type="number" name="" id="tma">
+                </div>
+                 
+                <div class="botton">
+                    <button id="adicionarResultados" class="botao bto-principal">Enviar</button>
+                </div>
+
+                
+
+                
+            </form>
+        </section>
+    </main>
+    <footer>
+        &copy;Feito por Leandro Chaves
+    </footer>
+    <script src="resultado.js"></script>
+</body>
+</html>

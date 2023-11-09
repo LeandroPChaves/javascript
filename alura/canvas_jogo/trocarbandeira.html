@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+</body>
+<script>
+    let tela = document.querySelector('canvas');
+    let pincel = tela.getContext('2d');
+    
+    function alemanha(){
+        pincel.fillStyle = 'black';
+        pincel.fillRect(0,0,600,100);
+
+        pincel.fillStyle = 'red';
+        pincel.fillRect(0,100,600,100);
+
+        pincel.fillStyle = 'yellow';
+        pincel.fillRect(0,200,600,100);
+    }
+
+    function brasil(){
+        pincel.fillStyle = 'green';
+        pincel.fillRect(0,0,600,300);
+
+        pincel.fillStyle = 'yellow';
+        pincel.beginPath();
+        pincel.moveTo(300, 0);
+        pincel.lineTo(100, 150);
+        pincel.lineTo(300,300);
+        pincel.fill();
+        
+        pincel.fillStyle = 'yellow';
+        pincel.beginPath();
+        pincel.moveTo(300, 0);
+        pincel.lineTo(500, 150);
+        pincel.lineTo(300,300);
+        pincel.fill();
+
+        pincel.fillStyle = 'blue';
+        pincel.beginPath();
+        pincel.arc(300,150,50,0,2*Math.PI);
+        pincel.fill();
+    }
+
+    function trocabandeira(){
+        setInterval(alemanha, 3000);
+        setInterval(brasil, 3000);
+    }
+
+    var mostraBrasil = true;
+
+function trocaBandeira() {
+
+    if(mostraBrasil == true) {
+        brasil();
+        mostraBrasil = false;
+    } else {
+        alemanha();
+        mostraBrasil = true;
+    }
+}
+
+// function trocaBandeira() {
+
+// if(mostraBrasil) {
+//     desenhaBandeiraBrasil();
+// } else {
+//     desenhaBandeiraAlemanha();
+// }
+// mostraBrasil = !mostraBrasil;
+// }
+
+setInterval(trocaBandeira, 3000); // a cada 3 segundos, chama trocaBandeira 
+</script>
+</html>

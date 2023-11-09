@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mostraFrase(){
+            let mostra = prompt("Informe o que vc quiser para aparecer no alerta")
+            alert(mostra);
+        }
+
+        function mostraFraseParametro(frase){
+            alert (frase);
+        }
+
+        function soma(n1, n2){
+            let soma = (n1 + n2)
+            alert (soma)
+        }
+
+        
+
+        function mediaAluno(n1, n2){
+            let numero1 = n1;
+            let numero2 = n2;
+            let media = (n1 + n2)/2;
+            if (media > 6){
+                alert("Aprovado");
+            } else {
+                alert("Reprovado");
+            }
+            alert (`A média é: ${media}`);
+        }
+
+        let num1 = 10;
+        let num2 = 4.5;
+         
+        //let num3PontoFlutuante = 3.3;  (somente back-end)
+
+
+        soma(num1, num2);
+
+        mediaAluno(num1, num2);
+
+
+    </script>
+</head>
+<body>
+    <button onclick="mostraFrase()">Mostrar alerta</button>
+    
+    <input type="button" value="alerta parametro" onclick="mostraFraseParametro('Essa função tem parametro')">
+</body>
+</html>

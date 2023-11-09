@@ -1,0 +1,43 @@
+const botao = document.querySelectorAll(".controle-ajuste");
+
+
+
+botao.forEach((elemento) => {
+    elemento.addEventListener("click", (evento) => {
+       manipulaDados(evento.target.textContent, evento.target.parentNode);
+       
+    })
+});
+
+function manipulaDados (operacao, botao){
+        const peca = botao.querySelector("[data-contador]");
+    
+        if (operacao === "-"){
+            peca.value = parseInt(peca.value) - 1;
+        } else {
+            peca.value = parseInt(peca.value) + 1;
+        
+    }
+    }
+
+
+
+
+// const controle = document.querySelectorAll(".controle-ajuste");
+
+// controle.forEach ((elemento) => {
+//   elemento.addEventListener("click", (evento) => {
+//     manipulaDados(evento.target.textContent, evento.target.parentNode )
+//   })
+// })
+
+// function manipulaDados (operacao, controle){
+//     const peca = controle.querySelector("[data-contador]");
+
+//     if (operacao === "-"){
+//         peca.value = parseInt(peca.value) - 1;
+//     } else {
+//         peca.value = parseInt(peca.value) + 1;
+    
+// }
+// }

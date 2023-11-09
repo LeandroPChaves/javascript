@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="600px" height="400px"></canvas>
+</body>
+<script>
+    let tela = document.querySelector("canvas");
+    let pincel = tela.getContext("2d");
+
+    pincel.fillStyle = "darkgreen";
+    pincel.fillRect(95, 50, 350, 300);
+
+    pincel.fillStyle = "black";
+    pincel.fillRect(150, 100, 90, 90);
+
+    pincel.fillStyle = "black";
+    pincel.fillRect(300, 100, 90, 90);
+
+    pincel.fillStyle = "black";
+    pincel.fillRect(240, 190, 60, 100);
+
+    pincel.fillStyle = "black";
+    pincel.fillRect(200, 240, 40, 110);
+
+    pincel.fillStyle = "black";
+    pincel.fillRect(300, 240, 40, 110);
+
+    // pincel.fillStyle = "red";
+    // pincel.beginPath();
+    // pincel.moveTo(50, 50);
+    // pincel.lineTo(50, 400);
+    // pincel.lineTo(400, 400);
+    // pincel.fill();
+
+
+
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let alimento = prompt("Informe qual alimento deseja pesquisar");
+        alimento = alimento.toUpperCase();
+            while (alimento.length < 4 || alimento<0 || alimento>=0){
+            alimento = prompt("Valor inválido.Informe novamente qual alimento deseja pesquisar"); 
+            alimento = alimento.toUpperCase();
+            }   
+            if (alimento == "ABACAXI" || alimento == "BANANA" || alimento == "GOIABA" || alimento == "COCO"){ 
+                    alert ("Alimento Disponível na feira");
+                    let precoAntigo = (prompt(`Qual o valor do(a) ${alimento} no mês anterior em R$?`)); 
+                    let precoAtual  = (prompt(`Qual o valor do(a) ${alimento} atual em R$?`));
+                    if (precoAtual > precoAntigo){
+                        let diferenca = (precoAtual - precoAntigo);
+                        alert (`O aumento do valor referente ao mês passado foi de R$ ${diferenca}`);
+                    } else if (precoAtual < precoAntigo){
+                        let diferenca = (precoAntigo - precoAtual);
+                        alert ("A redução do valor referente ao mês passado foi de: R$ "+ Math.round(diferenca));
+                    }else{
+                        alert("Não houve alteração no valor")
+                    }
+
+                } else {
+                    alert ("Alimento não tem na feira")
+                }
+    </script>
+
+    
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>btn</button>
+    <button>btn</button>
+    <button>btn</button>
+    
+    <script>
+       
+       const btn = document.querySelectorAll("button");
+
+       btn[0].addEventListener("click", function teste() {alert("teste1")});
+       btn[1].addEventListener("click", function () {alert("teste2")});
+       btn[2].addEventListener("click", () => {alert("teste3")});
+
+
+
+    </script> 
+
+    <!-- <button type="button" onclick="btnclikar()">oi</button>
+    <script>
+        function btnclikar(){
+            console.log ("oi");
+        }
+    </script> -->
+</body>
+</html> 
